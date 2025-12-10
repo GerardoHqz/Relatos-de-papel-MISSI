@@ -1,0 +1,112 @@
+[
+    {
+      "id": 101,
+      "titulo": "Cien años de soledad",
+      "autor": "Gabriel García Márquez",
+      "genero": "Realismo mágico",
+      "anio": 1967,
+      "precio": 15.99,
+      "stock": 12,
+      "disponible": true,
+      "descripcion": "La historia de la familia Buendía a lo largo de siete generaciones en el pueblo ficticio de Macondo."
+    },
+    {
+      "id": 102,
+      "titulo": "1984",
+      "autor": "George Orwell",
+      "genero": "Distopía",
+      "anio": 1949,
+      "precio": 12.50,
+      "stock": 8,
+      "disponible": true,
+      "descripcion": "Una novela política de ficción distópica que introduce los conceptos del omnipresente Gran Hermano."
+    },
+    {
+      "id": 103,
+      "titulo": "El Principito",
+      "autor": "Antoine de Saint-Exupéry",
+      "genero": "Fábula",
+      "anio": 1943,
+      "precio": 9.99,
+      "stock": 25,
+      "disponible": true,
+      "descripcion": "Un cuento poético acompañado de ilustraciones hechas con acuarelas por el mismo Saint-Exupéry."
+    },
+    {
+      "id": 104,
+      "titulo": "El Señor de los Anillos: La Comunidad del Anillo",
+      "autor": "J.R.R. Tolkien",
+      "genero": "Fantasía",
+      "anio": 1954,
+      "precio": 22.00,
+      "stock": 0,
+      "disponible": false,
+      "descripcion": "El primer volumen de la novela de fantasía épica El Señor de los Anillos."
+    },
+    {
+      "id": 105,
+      "titulo": "Don Quijote de la Mancha",
+      "autor": "Miguel de Cervantes",
+      "genero": "Clásico",
+      "anio": 1605,
+      "precio": 18.50,
+      "stock": 5,
+      "disponible": true,
+      "descripcion": "Las aventuras de un hidalgo pobre que lee tantas novelas de caballería que acaba enloqueciendo."
+    },
+    {
+      "id": 106,
+      "titulo": "Código Da Vinci",
+      "autor": "Dan Brown",
+      "genero": "Misterio",
+      "anio": 2003,
+      "precio": 14.20,
+      "stock": 15,
+      "disponible": true,
+      "descripcion": "Un misterio de detectives que sigue al simbólogo Robert Langdon mientras investiga un asesinato en el Louvre."
+    },
+    {
+      "id": 107,
+      "titulo": "Orgullo y Prejuicio",
+      "autor": "Jane Austen",
+      "genero": "Romance",
+      "anio": 1813,
+      "precio": 10.00,
+      "stock": 9,
+      "disponible": true,
+      "descripcion": "Una novela romántica de modales que sigue el desarrollo del carácter de Elizabeth Bennet."
+    },
+    {
+      "id": 108,
+      "titulo": "Sapiens: De animales a dioses",
+      "autor": "Yuval Noah Harari",
+      "genero": "No ficción",
+      "anio": 2011,
+      "precio": 19.95,
+      "stock": 20,
+      "disponible": true,
+      "descripcion": "Un recorrido por la historia de la humanidad, desde la Edad de Piedra hasta el siglo XXI."
+    },
+    {
+      "id": 109,
+      "titulo": "Harry Potter y la piedra filosofal",
+      "autor": "J.K. Rowling",
+      "genero": "Fantasía",
+      "anio": 1997,
+      "precio": 16.99,
+      "stock": 30,
+      "disponible": true,
+      "descripcion": "El primer libro de la serie de Harry Potter y su introducción al mundo mágico."
+    },
+    {
+      "id": 110,
+      "titulo": "Crónica de una muerte anunciada",
+      "autor": "Gabriel García Márquez",
+      "genero": "Novela",
+      "anio": 1981,
+      "precio": 11.50,
+      "stock": 7,
+      "disponible": true,
+      "descripcion": "Relata en forma de reconstrucción periodística el asesinato de Santiago Nasar por los gemelos Vicario."
+    }
+  ]
