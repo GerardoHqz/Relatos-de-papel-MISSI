@@ -1,5 +1,6 @@
 import { useNavigate, Link } from 'react-router-dom'
 import { BookOpen, ShoppingCart, Search } from 'lucide-react'
+import './Navbar.css'
 
 const Navbar = ({ searchQuery, setSearchQuery, cartCount = 0 }) => {
   const navigate = useNavigate()

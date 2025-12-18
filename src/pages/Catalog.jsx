@@ -1,5 +1,5 @@
 import { Star } from 'lucide-react'
-import BookCard from '../components/BookCard'
+import BookCard from '../components/BookCard/BookCard'
 import { books } from '../data/books'
 
 const Catalog = ({ searchQuery = '', addToCart }) => {
