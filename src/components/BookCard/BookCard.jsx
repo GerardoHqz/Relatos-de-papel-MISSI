@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ShoppingCart, ArrowRight, Star } from 'lucide-react'
+import './BookCard.css'
 
 const BookCard = ({ book, onAddToCart }) => {
   const handleAdd = () => {
