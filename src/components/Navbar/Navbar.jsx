@@ -49,10 +49,14 @@ const Navbar = ({ searchQuery, setSearchQuery, cartCount = 0 }) => {
           <Link to="/catalog" className="navbar__link">
             Checkout
           </Link>
+          < Link to ="/helpCenter" className="navbar__link">
+           Ayuda
+          </Link>
           <Link to="/catalog" className="navbar__link navbar__link--cart">
             <ShoppingCart size={20} />
             {cartCount > 0 && <span className="navbar__badge">{cartCount}</span>}
           </Link>
+          
         </nav>
       </div>
     </header>

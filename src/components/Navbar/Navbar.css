@@ -47,6 +47,7 @@
 
 .navbar__search {
   width: 100%;
+  max-width: 750px;
 }
 
 .navbar__search-wrapper {

@@ -1,0 +1,145 @@
+
+.ayuda-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.faq-item {
+  border: 1px solid #ccc;
+  padding: 12px;
+  margin: 10px auto;
+  max-width: 600px;
+  border-radius: 8px;
+}
+
+.faq-button {
+  background: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.soporte-section {
+  margin-top: 30px;
+}
+
+
+.ticket-btn {
+  margin-top: 1rem;
+  width: 300px;
+  background: #dc2626;
+  color: #ffffff;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ticket-btn:hover {
+  background: #b91c1c;
+}
+
+.link-terminos {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #2563eb;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link-terminos:hover {
+  color: #1d4ed8;
+}
+
+.ticket-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 340px;
+  background: #ffffff;
+  color: #1f2937;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  border-top: 6px solid #dc2626;
+  z-index: 1000;
+}
+
+.ticket-header {
+  background: #dc2626;
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  border-radius: 6px 6px 0 0;
+}
+
+.ticket-close {
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.ticket-close:hover {
+  text-decoration: underline;
+}
+
+.ticket-body {
+  padding: 1rem;
+}
+
+.ticket-label {
+  font-weight: 600;
+  margin-top: 0.75rem;
+  display: block;
+  color: #7f1d1d;
+}
+
+.ticket-input,
+.ticket-container textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.25rem;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  font-size: 0.9rem;
+}
+
+.ticket-input:focus,
+.ticket-container textarea:focus {
+  outline: none;
+  border-color: #dc2626;
+}
+
+.ticket-ok {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #1f2937;
+}
+
+.ticket-code-label {
+  display: block;
+  margin-top: 0.75rem;
+  font-weight: 600;
+  color: #7f1d1d;
+}
+
+.ticket-code {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #dc2626;
+  letter-spacing: 1px;
+  background: #fee2e2;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+

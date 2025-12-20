@@ -4,7 +4,8 @@ import Landing from '../pages/Landing'
 import Login from '../pages/Login'
 import Catalog from '../pages/Catalog'
 import DetailsBook from '../components/DetailsBook/DetailsBook.jsx' 
-
+import Ayuda  from '../components/HelpCard/seccion_soporte.jsx'
+import  TerminosYCondiciones from '../pages/terminosycondiciones.jsx'
 export const AppRouter = ({ searchQuery, setSearchQuery, cartCount, addToCart }) => {
   return (
     <MainLayout 
@@ -15,6 +16,8 @@ export const AppRouter = ({ searchQuery, setSearchQuery, cartCount, addToCart })
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/helpCenter" element={<Ayuda />} />
+        <Route path="/terminos-y-condiciones" element={<TerminosYCondiciones />} />
         
         <Route 
           path="/catalog" 
