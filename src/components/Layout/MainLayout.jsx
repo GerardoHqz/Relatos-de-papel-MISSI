@@ -1,5 +1,6 @@
 import { useLocation } from 'react-router-dom'
 import Navbar from '../Navbar/Navbar' 
+import Footer from '../Footer/Footer'
 
 const MainLayout = ({ children, searchQuery, setSearchQuery, cartCount }) => {
   const location = useLocation()
@@ -21,6 +22,9 @@ const MainLayout = ({ children, searchQuery, setSearchQuery, cartCount }) => {
         {/* Aquí se renderizarán tus Rutas */}
         {children}
       </main>
+
+      {/* El footer solo sera visible donde aparece el Navbar */}
+      {!hideNavbar && <Footer />}
     </div>
   )
 }

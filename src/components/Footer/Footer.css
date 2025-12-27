@@ -1,0 +1,89 @@
+.footer {
+  background-color: var(--color-surface);
+  border-top: 1px solid #e2e8f0;
+  padding: 3rem 1rem 1.5rem;
+  color: var(--color-muted);
+  width: 100%;
+}
+
+.footer__container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+.footer__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-navy);
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.footer__brand svg {
+  color: var(--color-accent);
+}
+
+.footer__description {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.footer__title {
+  color: var(--color-navy);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.footer__nav, .footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  list-style: none;
+  padding: 0;
+}
+
+.footer__nav a, .footer__contact li {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--color-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.2s;
+}
+
+.footer__nav a:hover {
+  color: var(--color-accent);
+}
+
+.footer__social {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.footer__social svg {
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.footer__social svg:hover {
+  transform: translateY(-3px);
+  color: var(--color-accent);
+}
+
+.footer__bottom {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid #f1f5f9;
+  text-align: center;
+  font-size: 0.85rem;
+}
