@@ -1,8 +1,9 @@
 import { useLocation } from 'react-router-dom'
 import Navbar from '../Navbar/Navbar' 
 import Footer from '../Footer/Footer'
+import CartDrawer from '../CartDrawer/CartDrawer'
 
-const MainLayout = ({ children, searchQuery, setSearchQuery, cartCount }) => {
+const MainLayout = ({ children, searchQuery, setSearchQuery, cartCount, cart, isCartOpen, setIsCartOpen, removeFromCart }) => {
   const location = useLocation()
 
   const hideNavbarRoutes = ['/', '/login']
@@ -15,6 +16,7 @@ const MainLayout = ({ children, searchQuery, setSearchQuery, cartCount }) => {
           searchQuery={searchQuery} 
           setSearchQuery={setSearchQuery} 
           cartCount={cartCount} 
+          onCartClick={() => setIsCartOpen(true)} 
         />
       )}
       
@@ -25,6 +27,14 @@ const MainLayout = ({ children, searchQuery, setSearchQuery, cartCount }) => {
 
       {/* El footer solo sera visible donde aparece el Navbar */}
       {!hideNavbar && <Footer />}
+
+      {/* Carrito Flotante */}
+      <CartDrawer 
+        isOpen={isCartOpen} 
+        onClose={() => setIsCartOpen(false)} 
+        cart={cart}
+        onRemove={removeFromCart}
+      />
     </div>
   )
 }

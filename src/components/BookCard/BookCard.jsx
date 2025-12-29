@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom'
 import { ShoppingCart, ArrowRight, Star } from 'lucide-react'
 import './BookCard.css'
 
-const BookCard = ({ book, onAddToCart }) => {
+const BookCard = ({ book, addToCart }) => {
   const handleAdd = () => {
-    if (onAddToCart) {
-      onAddToCart(book)
+    if (addToCart) {
+      addToCart(book)
     }
   }
 

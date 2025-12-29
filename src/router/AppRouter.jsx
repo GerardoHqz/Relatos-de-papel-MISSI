@@ -6,12 +6,16 @@ import Catalog from '../pages/Catalog'
 import DetailsBook from '../components/DetailsBook/DetailsBook.jsx' 
 import Ayuda  from '../components/HelpCard/seccion_soporte.jsx'
 import  TerminosYCondiciones from '../pages/terminosycondiciones.jsx'
-export const AppRouter = ({ searchQuery, setSearchQuery, cartCount, addToCart }) => {
+export const AppRouter = ({ searchQuery, setSearchQuery, cartCount, addToCart, cart, removeFromCart, isCartOpen, setIsCartOpen }) => {
   return (
     <MainLayout 
       searchQuery={searchQuery} 
       setSearchQuery={setSearchQuery} 
       cartCount={cartCount}
+      cart={cart}
+      removeFromCart={removeFromCart}
+      isCartOpen={isCartOpen}
+      setIsCartOpen={setIsCartOpen}
     >
       <Routes>
         <Route path="/" element={<Landing />} />

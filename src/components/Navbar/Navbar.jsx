@@ -2,7 +2,7 @@ import { useNavigate, Link } from 'react-router-dom'
 import { BookOpen, ShoppingCart, Search } from 'lucide-react'
 import './Navbar.css'
 
-const Navbar = ({ searchQuery, setSearchQuery, cartCount = 0 }) => {
+const Navbar = ({ searchQuery, setSearchQuery, cartCount = 0, onCartClick }) => {
   const navigate = useNavigate()
 
   const handleSearchChange = (event) => {
@@ -52,10 +52,10 @@ const Navbar = ({ searchQuery, setSearchQuery, cartCount = 0 }) => {
           < Link to ="/helpCenter" className="navbar__link">
            Ayuda
           </Link>
-          <Link to="/catalog" className="navbar__link navbar__link--cart">
+          <div className="navbar__link navbar__link--cart" onClick={onCartClick} style={{cursor: 'pointer'}}>
             <ShoppingCart size={20} />
             {cartCount > 0 && <span className="navbar__badge">{cartCount}</span>}
-          </Link>
+          </div>
           
         </nav>
       </div>

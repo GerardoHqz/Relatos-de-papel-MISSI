@@ -24,7 +24,7 @@ const Catalog = ({ searchQuery = '', addToCart }) => {
 
           <div className="catalog__grid">
             {recommended.map((book) => (
-              <BookCard key={book.id} book={book} onAddToCart={addToCart} />
+              <BookCard key={book.id} book={book} addToCart={addToCart} />
             ))}
           </div>
         </section>
@@ -48,7 +48,7 @@ const Catalog = ({ searchQuery = '', addToCart }) => {
         ) : (
           <div className="catalog__grid">
             {filteredBooks.map((book) => (
-              <BookCard key={book.id} book={book} onAddToCart={addToCart} />
+              <BookCard key={book.id} book={book} addToCart={addToCart} />
             ))}
           </div>
         )}
