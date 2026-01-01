@@ -1,25 +1,10 @@
-import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { BookOpen, ArrowRight } from 'lucide-react'
+import { useCountdown } from '../hooks/useCountdown'
 
 const Landing = () => {
   const navigate = useNavigate()
-  const [timeLeft, setTimeLeft] = useState(5)
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => {
-        if (prev <= 1) {
-          clearInterval(timer)
-          navigate('/login')
-          return 0
-        }
-        return prev - 1
-      })
-    }, 1000)
-
-    return () => clearInterval(timer)
-  }, [navigate])
+  const timeLeft = useCountdown(5, () => navigate('/login'))
 
   const handleGoLogin = () => {
     navigate('/login')

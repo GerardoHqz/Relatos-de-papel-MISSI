@@ -8,7 +8,7 @@ import Ayuda  from '../components/HelpCard/seccion_soporte.jsx'
 import  TerminosYCondiciones from '../pages/terminosycondiciones.jsx'
 import Checkout from '../components/Checkout/Checkout.jsx'
 import CartPage from "../pages/CartPage.jsx";
-export const AppRouter = ({ searchQuery, setSearchQuery, cartCount, addToCart, cart, removeFromCart, clearCart,isCartOpen, setIsCartOpen }) => {
+export const AppRouter = ({ searchQuery, setSearchQuery, debouncedSearchQuery, cartCount, addToCart, cart, removeFromCart, clearCart, isCartOpen, setIsCartOpen }) => {
   return (
     <MainLayout 
       searchQuery={searchQuery} 
@@ -27,7 +27,7 @@ export const AppRouter = ({ searchQuery, setSearchQuery, cartCount, addToCart, c
         
         <Route 
           path="/catalog" 
-          element={<Catalog searchQuery={searchQuery} addToCart={addToCart} />} 
+          element={<Catalog searchQuery={debouncedSearchQuery} addToCart={addToCart} />} 
         />
         
         <Route 

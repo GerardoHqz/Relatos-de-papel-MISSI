@@ -1,12 +1,14 @@
 import { useState } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import { AppRouter } from './router/AppRouter'
+import { useDebouncedSearch } from './hooks/useDebouncedSearch'
 import './App.css'
 
 function App() {
   const [searchQuery, setSearchQuery] = useState('')
   const [cart, setCart] = useState([])
   const [isCartOpen, setIsCartOpen] = useState(false)
+  const debouncedSearchQuery = useDebouncedSearch(searchQuery, 500)
 
   const addToCart = (book) => {
     setCart((prev) => {
@@ -37,6 +39,7 @@ function App() {
       <AppRouter
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
+        debouncedSearchQuery={debouncedSearchQuery}
         cartCount={cartCount}
         addToCart={addToCart}
         cart={cart}
