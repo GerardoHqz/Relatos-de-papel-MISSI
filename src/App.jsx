@@ -5,35 +5,48 @@ import './App.css'
 
 function App() {
   const [searchQuery, setSearchQuery] = useState('')
-  //const [cartCount, setCartCount] = useState(0)
-  const [cart, setCart] = useState([]) // Lista de libros
-  const [isCartOpen, setIsCartOpen] = useState(false) // Controla si se ve el carrito
+  const [cart, setCart] = useState([])
+  const [isCartOpen, setIsCartOpen] = useState(false)
 
   const addToCart = (book) => {
-    //setCartCount((count) => count + 1)
-    setCart((prev) => [...prev, book])
-    setIsCartOpen(true) // Abre el carrito automáticamente al agregar
+    setCart((prev) => {
+      const isBookInCart = prev.find((item) => item.id === book.id);
+
+      if (isBookInCart) {
+        return prev.map((item) =>
+          item.id === book.id
+            ? { ...item, quantity: (item.quantity || 1) + 1 }
+            : item
+        );
+      }
+      return [...prev, { ...book, quantity: 1 }];
+    });
+    setIsCartOpen(true);
   }
 
-  const removeFromCart = (index) => {
-    setCart((prev) => prev.filter((_, i) => i !== index))
+  const removeFromCart = (bookId) => {
+    setCart((prev) => prev.filter((item) => item.id !== bookId));
   }
+
+  const clearCart = () => setCart([])
+
+  const cartCount = cart.reduce((acc, item) => acc + (item.quantity || 1), 0);
 
   return (
     <BrowserRouter>
-      <AppRouter 
-        searchQuery={searchQuery} 
-        setSearchQuery={setSearchQuery} 
-        cartCount={cart.length}
+      <AppRouter
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+        cartCount={cartCount}
         addToCart={addToCart}
         cart={cart}
         removeFromCart={removeFromCart}
+        clearCart={clearCart}
         isCartOpen={isCartOpen}
         setIsCartOpen={setIsCartOpen}
       />
     </BrowserRouter>
   )
-
 }
 
-export default App
+export default App;

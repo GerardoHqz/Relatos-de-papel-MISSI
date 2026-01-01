@@ -46,9 +46,6 @@ const Navbar = ({ searchQuery, setSearchQuery, cartCount = 0, onCartClick }) => 
           <Link to="/catalog" className="navbar__link">
             Libros
           </Link>
-          <Link to="/catalog" className="navbar__link">
-            Checkout
-          </Link>
           < Link to ="/helpCenter" className="navbar__link">
            Ayuda
           </Link>

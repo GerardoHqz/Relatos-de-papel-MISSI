@@ -6,7 +6,9 @@ import Catalog from '../pages/Catalog'
 import DetailsBook from '../components/DetailsBook/DetailsBook.jsx' 
 import Ayuda  from '../components/HelpCard/seccion_soporte.jsx'
 import  TerminosYCondiciones from '../pages/terminosycondiciones.jsx'
-export const AppRouter = ({ searchQuery, setSearchQuery, cartCount, addToCart, cart, removeFromCart, isCartOpen, setIsCartOpen }) => {
+import Checkout from '../components/Checkout/Checkout.jsx'
+import CartPage from "../pages/CartPage.jsx";
+export const AppRouter = ({ searchQuery, setSearchQuery, cartCount, addToCart, cart, removeFromCart, clearCart,isCartOpen, setIsCartOpen }) => {
   return (
     <MainLayout 
       searchQuery={searchQuery} 
@@ -30,10 +32,17 @@ export const AppRouter = ({ searchQuery, setSearchQuery, cartCount, addToCart, c
         
         <Route 
           path="/book/:id" 
-          element={<DetailsBook />} 
+          element={<DetailsBook addToCart={addToCart} />} 
         />
+
+         <Route path="/checkout" element={<Checkout cart={cart} clearCart={clearCart}/>}/>
         
         <Route path="*" element={<Navigate to="/" replace />} />
+
+        <Route 
+          path="/cart" 
+          element={<CartPage cart={cart} onRemove={removeFromCart} />} 
+        />
       </Routes>
     </MainLayout>
   )

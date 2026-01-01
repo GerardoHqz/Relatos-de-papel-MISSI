@@ -1,0 +1,50 @@
+.checkout {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.checkout h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #0f1c2f;
+}
+
+.checkout ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.checkout li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.checkout h3 {
+  text-align: right;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.checkout button {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 1rem;
+  background: #d7263d;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.checkout button:hover {
+  opacity: 0.9;
+}

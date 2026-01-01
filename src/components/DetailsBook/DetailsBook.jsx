@@ -1,9 +1,10 @@
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams, useNavigate } from 'react-router-dom'
 import { books } from '../../data/books'
 import './DetailsBook.css'
 
-const DetailsBook = () => {
+const DetailsBook = ({ addToCart = () => {} }) => {
     const { id } = useParams()
+    const navigate = useNavigate()
     const bookId = Number.parseInt(id, 10)
     const book = books.find(book => book.id === bookId)
 
@@ -18,6 +19,9 @@ const DetailsBook = () => {
             </div>
         )
     }
+
+      const handleAddToCart = () => {addToCart(book)}
+      const handleGoToCart = () => {navigate('/cart')}
 
     return (
         <div className="container">
@@ -51,10 +55,10 @@ const DetailsBook = () => {
                     </div>
 
                     <div className="actions">
-                        <button className="btn btn-primary">
+                        <button className="btn btn-primary" onClick={handleAddToCart}>
                             <i className="icon-cart">🛒</i> Añadir al carrito
                         </button>
-                        <button className="btn btn-secondary">Ver carrito</button>
+                        <button className="btn btn-secondary"onClick={handleGoToCart}>Ver carrito</button>
                     </div>
                 </div>
             </div>
